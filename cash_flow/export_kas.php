@@ -1,64 +1,93 @@
 <?php
+require_once('TCPDF-main/tcpdf.php'); // Sesuaikan dengan lokasi TCPDF di proyek Anda
 include './config/koneksi.php';
- ?>
 
-<!doctype html>
-<html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+// Extending TCPDF untuk menyesuaikan Header dan Footer
+class PDF extends TCPDF {
 
+    // Halaman header
+    public function Header() {
+        // Output HTML di header
+        $header = '
+        <h3>Data Uang Kas</h3>
+        ';
+        $this->writeHTML($header, true, false, true, false, '');
+    }
 
-
-
-
-  </head>
-
-
-  <!--ini awal content-->
-  
-  <h3><p class="text-center mt-4">Data Uang Kas</p></h3>
-
-    <center><table class=" mt-4" width="1000px" border="1">
-        <tr>
-       <td><center>No</td>
-   		 <td><center>Nama Anggota</td>
-   		 <td><center>Jumlah</td>
-       <td><center>Tanggal Setor</td>
-         </tr>
-
-         <?php
-        	  $query = mysqli_query($conn, "SELECT * FROM kas");
-        	  while($row = mysqli_fetch_array($query)){
-
-        	  ?>
+    // Halaman footer
+    public function Footer() {
+        // Informasi footer
+        $footer = '
+        <table border="0" width="100%" style="font-size: 10px;">
             <tr>
-            <td><center><?php echo $row['id'] ?></td>
-            <td><center><?php echo $row['nama'] ?></td>
-            <td><center><?php echo $row['jumlah'] ?></td>
-            <td><center><?php echo $row['tanggal'] ?></td>
-             </tr>
-  <?php
-  }
-    ?>
+                <td style="text-align:left;">Footer kiri</td>
+                <td style="text-align:right;">Footer kanan</td>
+            </tr>
+        </table>
+        ';
+        $this->writeHTML($footer, true, false, true, false, '');
+    }
+}
 
+// Membuat instance TCPDF
+$pdf = new PDF();
 
+// Menambahkan halaman baru
+$pdf->AddPage();
 
+// CSS untuk styling tabel
+$html = '
+<style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 12px;
+    }
+    th, td {
+        border: 1px solid #000;
+        padding: 8px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+';
 
-    <?php
-    header("Content-type: application/vnd.ms-excel");
-    header("Content-Disposition: attachment; filename= Data_kas.xls");
-    ?>
+// Membuat tabel untuk data uang kas
+$html .= '
+<table>
+    <thead>
+        <tr>
+            <th>No</th>
+            <th>Nama Anggota</th>
+            <th>Jumlah</th>
+            <th>Tanggal Setor</th>
+        </tr>
+    </thead>
+    <tbody>';
 
+$query = mysqli_query($conn, "SELECT * FROM kas");
+$no = 1;
+while ($row = mysqli_fetch_array($query)) {
+    // Menambahkan baris untuk setiap transaksi uang kas
+    $html .= '
+    <tr>
+        <td>' . $no++ . '</td>
+        <td>' . $row['nama'] . '</td>
+        <td>' . $row['jumlah'] . '</td>
+        <td>' . $row['tanggal'] . '</td>
+    </tr>';
+}
 
+$html .= '
+    </tbody>
+</table>';
 
+// Menuliskan HTML ke halaman PDF
+$pdf->writeHTML($html, true, false, true, false, '');
 
-    <!--ini akhir content bosq-->
+// Output file PDF ke browser
+$pdf->Output('Data_kas.pdf', 'I'); // 'I' untuk menampilkan di browser, 'D' untuk mengunduh langsung
 
-        <!-- Optional JavaScript -->
-        <!-- Popper.js first, then Bootstrap JS -->
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-      </body>
-    </html>
+?>

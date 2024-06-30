@@ -207,18 +207,18 @@ include 'config/koneksi.php';
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-              <h6 class="m-0 font-weight-bold text-primary">Info Detail Anggota:</h6>
+              <h6 class="m-0 font-weight-bold text-primary">Info Detail Mahasiswa:</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
               <!-- Content Row -->
   <div class="row ml-5">
     <div class="col-md-10 col-sm-12 col-xs-12">
-      <h2><center>Info Detail Anggota</center></h2>
+      <h2><center>Info Detail Mahasiswa</center></h2>
     <table class="table">
 
       <tr>
-        <td>Nama Anggota:</td>
+        <td>Nama Mahasiswa:</td>
         <td><?php echo $d['nama']; ?></td>
       </tr>
 
