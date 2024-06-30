@@ -220,7 +220,7 @@ include 'config/koneksi.php';
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span><p class="mb-1">Copyright &copy; <a href="https://github.com/Faiznurullah" style="text-decoration: none;"><b>ALIF ZAKARIA, EKA SETIA N.H, ZAHRA I AGUSTIN</b></a></p></span><br>
+            <span><p class="mb-1">Copyright &copy; <a href="https://github.com/TheFREeze01" style="text-decoration: none;"><b>ALIF ZAKARIA, EKA SETIA N.H, ZAHRA I AGUSTIN</b></a></p></span><br>
           </div>
         </div>
       </footer>
