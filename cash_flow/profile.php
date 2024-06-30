@@ -62,19 +62,19 @@ include 'config/koneksi.php';
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Manajemen Anggota
+        Manajemen Mahasiswa
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-user-circle"></i>
-          <span>Manajemen Anggota</span>
+          <span>Manajemen Mahasiswa</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <a class="collapse-item" href="tambah_anggota.php">Tambah Anggota</a>
-            <a class="collapse-item" href="daftar_anggota.php">Daftar Anggota</a>
+            <a class="collapse-item" href="tambah_anggota.php">Tambah Mahasiswa</a>
+            <a class="collapse-item" href="daftar_anggota.php">Daftar Mahasiswa</a>
           </div>
         </div>
       </li>
