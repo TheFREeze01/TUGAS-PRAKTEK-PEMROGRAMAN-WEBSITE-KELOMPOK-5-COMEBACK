@@ -74,7 +74,7 @@ include 'config/koneksi.php';
       <li class="nav-item active">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-home"></i>
-          <span>Dashboard</span></a>
+          <span>Menu Utama</span></a>
       </li>
 
       <!-- Divider -->
@@ -207,7 +207,7 @@ include 'config/koneksi.php';
 
           <!-- Page Heading -->
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
+            <h1 class="h3 mb-0 text-gray-800">Menu Utama</h1>
           </div>
 
           <!-- Content Row -->

@@ -54,7 +54,7 @@ include 'config/koneksi.php';
       <li class="nav-item active">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-home"></i>
-          <span>Dashboard</span></a>
+          <span>Menu Utama</span></a>
       </li>
 
       <!-- Divider -->
