@@ -259,7 +259,7 @@ error_reporting(0);
                                        <thead>
                                          <tr>
                                            <th scope="col">No</th>
-                                           <th scope="col">Nama Anggota</th>
+                                           <th scope="col">Nama Mahasiswa</th>
                                            <th scope="col">Jumlah</th>
                                            <th scope="col">Tanggal Setor</th>
                                            <th scope="col">Aksi</th>

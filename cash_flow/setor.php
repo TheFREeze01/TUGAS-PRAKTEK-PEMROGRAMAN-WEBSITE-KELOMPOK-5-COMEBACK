@@ -199,9 +199,9 @@ include 'config/koneksi.php';
 
 
                 <div class="col-sm-4">
-              <label>Nama Anggota:</label>
+              <label>Nama Mahasiswa:</label>
               <select class="form-control" name='nama' required>
-              <option selected disabled value="">Nama Anggota</option>
+              <option selected disabled value="">Nama Mahasiswa</option>
                 <?php
                  $brg=mysqli_query($conn, "select * from anggota where level_kas = '0'");
                  while($b=mysqli_fetch_array($brg)){

@@ -191,7 +191,7 @@ error_reporting(0);
                         <div class="card shadow mb-4">
                           <!-- Card Header - Dropdown -->
                           <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-             <h6 class="m-0 font-weight-bold text-primary">Data Anggota:</h6>
+             <h6 class="m-0 font-weight-bold text-primary">Data Mahasiswa:</h6><!-- di rubah -->
                           </div>
                           <!-- Card Body -->
                           <div class="card-body">
@@ -215,7 +215,7 @@ error_reporting(0);
                              <div class="col-md-8  mt-4">
 
 
-                     <h7 class="m-0 font-weight-bold">Kapasitas Anggota: <?php echo $kap; ?></h7><br>
+                     <h7 class="m-0 font-weight-bold">Kapasitas Mahasiswa: <?php echo $kap; ?></h7><br><!-- di rubah -->
                      <a href="export_anggota.php" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm mt-1"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
 
                              </div>
@@ -259,7 +259,7 @@ error_reporting(0);
                              <thead>
                                <tr>
                                  <th scope="col">No</th>
-                                 <th scope="col">Nama Anggota</th>
+                                 <th scope="col">Nama Mahasiswa</th>
                                  <th scope="col">Alamat</th>
                                  <th scope="col">Tanggal Lahir</th>
                                  <th scope="col">Aksi</th>

@@ -189,7 +189,7 @@ include 'config/koneksi.php';
           <div class="card shadow mb-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-<h6 class="m-0 font-weight-bold text-primary">Tambah Anggota:</h6>
+<h6 class="m-0 font-weight-bold text-primary">Tambah Mahasiswa:</h6>
             </div>
             <!-- Card Body -->
             <div class="card-body">
@@ -200,8 +200,8 @@ include 'config/koneksi.php';
 
 
                 <div class="col-sm-4">
-              <label>Nama Anggota:</label>
-              <input class="form-control form-control-sm" type="text" placeholder="Nama Anggota..." aria-label=".form-control-sm example" name='nama' required>
+              <label>Nama Mahasiswa:</label>
+              <input class="form-control form-control-sm" type="text" placeholder="Nama Mahasiswa..." aria-label=".form-control-sm example" name='nama' required>
               </div>
 
 
@@ -254,7 +254,7 @@ include 'config/koneksi.php';
 
                   }else{
 
-               $insert = mysqli_query($conn, "INSERT INTO anggota VALUES (
+               $insert = mysqli_query($conn, "INSERT INTO anggota VALUES ( 
                 NULL,
                 '$nama',
                 '$alamat',

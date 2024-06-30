@@ -229,7 +229,7 @@ error_reporting(0);
                <thead>
                  <tr>
                    <th scope="col">No</th>
-                   <th scope="col">Nama Anggota</th>
+                   <th scope="col">Nama Mahasiswa</th>
                    <th scope="col">Alamat</th>
                    <th scope="col">Umur</th>
                   </tr>
