@@ -46,7 +46,7 @@ error_reporting(0);
         <div class="sidebar-brand-icon rotate-n-15">
           <i class="fas fa-money-bill-alt"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Cash Flow <br> Class</div>
+        <div class="sidebar-brand-text mx-3"> KEUANGAN <br> KELAS 1EA </div>
       </a>
 
       <!-- Divider -->
