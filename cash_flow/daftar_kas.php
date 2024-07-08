@@ -203,7 +203,7 @@ error_reporting(0);
 
 
                                       $hmm= $jum;
-                                      $hal= 8;
+                                      $hal= 10;
                                       $page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
                                       $start = ($page - 1) * $hal;
                                       $kap = $hal * $hal;

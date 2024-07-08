@@ -201,7 +201,7 @@ error_reporting(0);
 
 
               $hmm= $jum;
-              $hal= 8;
+              $hal= 10;
               $page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
               $start = ($page - 1) * $hal;
               $kap = $hal * $hal;
@@ -257,6 +257,7 @@ echo "</div>";
                <thead>
                  <tr>
                    <th scope="col">No</th>
+                   <th scope="col">ID</th>
                    <th scope="col">Pengeluaran</th>
                    <th scope="col">Jumlah</th>
                    <th scope="col">Tanggal</th>
@@ -298,14 +299,15 @@ echo "</div>";
 
 
              if(mysqli_num_rows($brg)){
-
+                  $id=1;
                   while($row = mysqli_fetch_array($brg)){
 
 
                   ?>
                <tbody>
                  <tr>
-                   <th scope="row"><?php echo $row['id'] ?></th>
+                   <th scope="row"><?php echo $id ?></th>
+                   <td><?php echo $row['id'] ?></td>
                    <td><?php echo $row['nama'] ?></td>
                    <td><?php echo number_format($row['jumlah']) ?></td>
                    <td><?php echo $row['tanggal'] ?></td>
@@ -315,7 +317,7 @@ echo "</div>";
 
                </tbody>
 
-             <?php }}elseif(mysqli_num_rows($brg) <= 0 AND !$cari){
+             <?php $id++; }}elseif(mysqli_num_rows($brg) <= 0 AND !$cari){
 
 
                      echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5'>";

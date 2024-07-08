@@ -254,7 +254,7 @@ include 'config/koneksi.php';
 
                     echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5'>";
                     echo "<div class='alert alert-warning mt-4 ml-5' role='alert'>";
-                    echo "<p><center>Maaf Tidak Bisa</center></p>";
+                    echo "<p><center> Maaf, Saldo Tidak Cukup</center></p>";
                     echo   "</div>";
                     echo "</div>";
 
