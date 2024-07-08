@@ -258,7 +258,8 @@ error_reporting(0);
                                        <table class="table table-bordered table-hover  mt-3 text-nowrap css-serial">
                                        <thead>
                                          <tr>
-                                           <th scope="col">No</th>
+                                         <th scope="col">No</th>
+                                           <th scope="col">ID</th>
                                            <th scope="col">Nama Mahasiswa</th>
                                            <th scope="col">Jumlah</th>
                                            <th scope="col">Tanggal Setor</th>
@@ -300,14 +301,15 @@ error_reporting(0);
 
 
                                      if(mysqli_num_rows($brg)){
-
+                                          $id=1;
                                           while($row = mysqli_fetch_array($brg)){
 
 
                                           ?>
                                        <tbody>
                                          <tr>
-                                           <th scope="row"><?php echo $row['id'] ?></th>
+                                           <th scope="row"><?php echo $id ?></th>
+                                           <td><?php echo $row['id'] ?></td>
                                            <td><?php echo $row['nama'] ?></td>
                                            <td><?php echo number_format($row['jumlah']) ?></td>
                                            <td><?php echo $row['tanggal'] ?></td>
@@ -317,7 +319,7 @@ error_reporting(0);
 
                                        </tbody>
 
-                                     <?php }}elseif(mysqli_num_rows($brg) <= 0 AND !$cari){
+                                     <?php $id++; }}elseif(mysqli_num_rows($brg) <= 0 AND !$cari){
 
 
                                              echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5'>";
