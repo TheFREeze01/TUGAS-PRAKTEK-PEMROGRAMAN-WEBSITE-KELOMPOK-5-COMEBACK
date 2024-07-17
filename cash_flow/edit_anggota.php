@@ -186,56 +186,45 @@ include 'config/koneksi.php';
         <div class="container-fluid">
 
 
-          <?php
-            $id_brg= ($_GET['id']);
-            $ggl = !$id_brg;
-            if($ggl){
-
-                echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5 mt-5'>";
-                   echo "<div class='alert alert-danger mt-4 ml-5' role='alert'>";
-                  echo "<p><center>Maaf Data Ini Tidak Tersedia</center></p>";
-                   echo   "</div>";
-                   echo "</div>";
-
-            }else{
-            $det=mysqli_query($conn, "select * from anggota where id='$id_brg'");
-            while($d=mysqli_fetch_array($det)){
-            ?>
-          <div class="card shadow  ml-4 mr-4">
+        <?php
+$id_brg = ($_GET['id']);
+$ggl = !$id_brg;
+if ($ggl) {
+    echo "<div class='col-md-10 col-sm-12 col-xs-12 ml-5 mt-5'>";
+    echo "<div class='alert alert-danger mt-4 ml-5' role='alert'>";
+    echo "<p><center>Maaf Data Ini Tidak Tersedia</center></p>";
+    echo "</div>";
+    echo "</div>";
+} else {
+    $det = mysqli_query($conn, "SELECT * FROM anggota WHERE id='$id_brg'");
+    while ($d = mysqli_fetch_array($det)) {
+?>
+        <div class="card shadow  ml-4 mr-4">
             <!-- Card Header - Dropdown -->
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-        <h6 class="m-0 font-weight-bold text-primary">Edit Data Anggota:</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Edit Data Anggota:</h6>
             </div>
 
+            <form method="post" name='edit'>
+                <div class="row ml-5 mb-2 mt-3">
+                    <div class="col-md-6">
+                        <p><b>Nama Anggota:</b></p>
+                        <input class="form-control" type="text" name='nama' placeholder="Nama Anggota..." value="<?php echo $d['nama']; ?>" required>
 
+                        <p><b>Alamat:</b></p>
+                        <input class="form-control" type="text" name='alamat' placeholder="Alamat..." value="<?php echo $d['alamat']; ?>" required>
 
-        <form   method="post" name='edit'>
-          <div class="row ml-5 mb-2 mt-3">
-            <div class="col-md-6">
-
-        <P><b>Nama Anggota:</b></p>
-         <input class="form-control" type="text" name='nama' placeholder="Nama Anggota..."  value="<?php echo $d['nama']; ?>" required>
-
-           <P><b>Alamat:</b></p>
-        <input class="form-control" type="text" name='alamat' placeholder="Alamat..."  value="<?php echo $d['alamat']; ?>" required>
-
-          <P><b>Tanggal Lahir:</b></p>
-          <input class="form-control" type="date" name='umur'  required>
-
-
-
-          </div>
-
-        </div>
-        <div class="row ml-5 mb-4 mt-3">
-
-        <div class="col-md-5">
-        <button type="submit" class="btn btn-info" name='edit'>Update</button>&nbsp;<input type="reset" class="btn btn-danger"  value="Reset">
-        </div>
-
-        </div>
-
-        </form>
+                        <p><b>Tanggal Lahir:</b></p>
+                        <!-- Display current umur value -->
+                        <input class="form-control" type="date" name='umur' value="<?php echo $d['umur']; ?>" required>
+                    </div>
+                </div>
+                <div class="row ml-5 mb-4 mt-3">
+                    <div class="col-md-5">
+                        <button type="submit" class="btn btn-info" name='edit'>Update</button>&nbsp;<input type="reset" class="btn btn-danger" value="Reset">
+                    </div>
+                </div>
+            </form>
         <?php }} ?>
 
         <?php

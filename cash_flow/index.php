@@ -38,7 +38,7 @@ include 'config/koneksi.php';
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="">
   <meta name="author" content="">
-  <link rel="shortcut icon" href="img/favicon.png" type="image/gif" sizes="16x16">
+  <link rel="shortcut icon" href="img/LOGO_POLTEK.png" type="image/gif" sizes="16x16">
 
   <title>Menejemen Keuangan</title>
 
