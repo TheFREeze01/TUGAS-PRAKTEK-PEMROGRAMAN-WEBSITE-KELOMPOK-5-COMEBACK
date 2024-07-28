@@ -50,3 +50,23 @@ Program ini merupakan aplikasi yang didesain dan dibuat untuk bendahara. Aplikas
 ## Lisensi
 
 Aplikasi ini dibuat hanya untuk tujuan pembelajaran dan tidak boleh digunakan untuk tujuan komersial.
+
+## ScreenShot
+LOGIN
+<img src="cash_flow\img\Screenshot (16).png" alt="LOGIN">
+DASHBOARD
+<img src="cash_flow\img\Screenshot (8).png" alt="DASHBOARD">
+TAMBAH MAHASISWA
+<img src="cash_flow\img\Screenshot (9).png" alt="TAMBAH MAHASISWA">
+DATA MAHASISWA
+<img src="cash_flow\img\Screenshot (10).png" alt="DATA MAHASISWA">
+SETOR UANG KAS
+<img src="cash_flow\img\Screenshot (11).png" alt="SETOR UANG KAS">
+DATA PEMASUKAN KAS
+<img src="cash_flow\img\Screenshot (12).png" alt="DATA PEMASUKAN KAS">
+DAFTAR NUNDA KAS
+<img src="cash_flow\img\Screenshot (13).png" alt="DAFTAR NUNDA KAS">
+CATAT PENGELUARAN
+<img src="cash_flow\img\Screenshot (14).png" alt="CATAT PENGELUARAN">
+DATA PENGELUARAN KAS
+<img src="cash_flow\img\Screenshot (15).png" alt="DATA PENGELUARAN KAS">
